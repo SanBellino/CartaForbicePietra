@@ -1,14 +1,81 @@
 <!DOCTYPE html>
 <html>
+<head>
 <title>Carta Forbice e Pietra</title>
 <meta charset="UTF-8">
 <script>
-        let ciao= "ok"
-    console.log(ciao)
-let giocatoreuno()
+    const rock = 'Rock' ;
+    const paper = 'Paper' ;
+    const scissor = 'Scissor' ;
+   
+    let computernumber = Math.floor(Math.random(1) * 3);
+let computerPlay = computernumber ;
+
+    if (computerPlay === 1) {
+computerPlay = rock
+
+    }else if (computerPlay === 2) {
+computerPlay = paper
+
+}else if (computerPlay === 0) {
+computerPlay = scissor 
+
+}console.log(computerPlay);
+let computerSelection = computerPlay
+let playerSelection = window.prompt('Paper, Rock or Scissor?')
+if (playerSelection === 'rock') {
+    playerSelection = rock
+}
+else if (playerSelection === 'paper') {
+    playerSelection = paper
+}
+else if (playerSelection === 'scissor') {
+    playerSelection = scissor
+}
+else if (playerSelection === 'Rock') {
+    playerSelection = rock
+}
+else if (playerSelection === 'Paper') {
+    playerSelection = paper
+}
+else if (playerSelection === 'Scissor') {
+    playerSelection = scissor 
+} 
+else {
+    alert('Please, insert a valid symbol.')
+ }
+
+if (playerSelection === rock && computerSelection === paper) {
+    alert(`You lost... ${computerSelection} beats ${playerSelection}!`)
+}
+else if (playerSelection === rock && computerSelection === scissor) {
+    alert(`You win! ${playerSelection} beats ${computerSelection}!`)
+}
+else if (playerSelection === rock && computerSelection === rock) {
+    alert( ` It's a draw! you chose ${computerSelection} and the computer chosen ${playerSelection}!`)
+}
+else if (playerSelection === paper && computerSelection === paper) {
+    alert( ` It's a draw! you chose ${computerSelection} and the computer chosen ${playerSelection}!`)
+}
+else if (playerSelection === paper && computerSelection === rock) {
+    alert(`You win! ${playerSelection} beats ${computerSelection}!`)
+}
+else if (playerSelection === paper && computerSelection === scissor) {
+    alert(`You lost... ${computerSelection} beats ${playerSelection}!`)
+}
+else if (playerSelection === scissor && computerSelection === rock) {
+    alert(`You lost... ${computerSelection} beats ${playerSelection}!`)
+}
+else if (playerSelection === scissor && computerSelection === paper) {
+    alert(`You win! ${playerSelection} beats ${computerSelection}!`)
+}
+else if (playerSelection === scissor && computerSelection === scissor) {
+    alert( ` It's a draw! you chose ${computerSelection} and the computer chosen ${playerSelection}!`)
+}
+
 </script>
-
+</head>
 <body>
-
 </body>
 </html>
+
